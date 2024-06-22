@@ -1,7 +1,7 @@
 format = """
 [░▒▓](#ff143c)\
 $username\
-[  ](bg:#ff143c fg:#ffffff)\
+[ ](bg:#ff143c fg:#ffffff)\
 [](fg:#ff143c)\
 $git_branch\
 $git_status\
@@ -14,6 +14,12 @@ $virtualenv\
 $python\
 \n$character"""
 
+palette = 'redest'
+
+[palettes.redest]
+color_fg0 = '#ffffff'
+color_bg0 = '#ff143c'
+
 [directory]
 style = "fg:#ffffff"
 format = "[ $path ]($style)"
@@ -21,7 +27,11 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [username]
-format = "[ $username ]"
+show_always = true
+style_user = "bg:color_bg0 fg:color_fg0"
+style_root = "bg:color_bg0 fg:color_fg0"
+format = '[ $user ]($style)'
+
 
 [git_branch]
 symbol = ""
